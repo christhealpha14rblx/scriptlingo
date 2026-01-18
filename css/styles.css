@@ -1,144 +1,127 @@
 * {
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
 }
 
 body {
-  margin: 0;
-  background: #f6f7fb;
-  color: #111;
+  background: #f5f6fa;
 }
 
-/* APP LAYOUT */
 .app {
-  display: grid;
-  grid-template-columns: 220px 1.4fr 1fr;
-  min-height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 /* SIDEBAR */
 .sidebar {
-  background: #ffffff;
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid #ddd;
   padding: 20px;
-  border-right: 1px solid #eee;
 }
 
 .logo {
   font-size: 28px;
-  font-weight: 800;
-  color: #66d400;
-  margin-bottom: 24px;
-}
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  font-weight: 900;
+  margin-bottom: 30px;
 }
 
 .nav button {
+  display: block;
+  width: 100%;
   padding: 12px;
+  margin-bottom: 8px;
   border-radius: 10px;
   border: none;
-  background: #f1f3f5;
+  background: none;
   text-align: left;
   font-size: 14px;
   cursor: pointer;
 }
 
 .nav button.active {
-  background: #e6f7d5;
-  font-weight: 600;
+  background: #e0e7ff;
+  font-weight: 700;
 }
 
-/* UNIT HEADER COLUMN (MAIN FOCUS) */
-.unit-column {
-  padding: 28px;
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 30px;
 }
 
+/* UNIT HEADER */
 .unit-header {
-  background: #66d400;
+  background: #4f46e5;
   color: white;
-  padding: 28px;
-  border-radius: 16px;
+  border-radius: 18px;
+  padding: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .unit-header h1 {
-  margin: 0;
   font-size: 28px;
-}
-
-.unit-header p {
-  margin: 6px 0 0;
-  opacity: 0.9;
 }
 
 .unit-star {
-  font-size: 28px;
+  font-size: 32px;
 }
 
-/* CONTENT (RIGHT SIDE) */
+/* CONTENT */
 .content {
-  padding: 28px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  gap: 30px;
 }
 
-/* STATS CARD */
+/* RIGHT COLUMN */
+.right-column {
+  width: 260px;
+}
+
 .stats-card {
-  background: #ffffff;
-  padding: 14px 18px;
-  border-radius: 12px;
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
   display: flex;
-  gap: 18px;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  justify-content: space-between;
+  font-weight: 600;
 }
 
-/* GENERIC CARD */
 .card {
-  background: #ffffff;
-  padding: 18px;
+  background: white;
   border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 16px;
+  margin-bottom: 16px;
 }
 
-.card h3 {
-  margin: 0 0 6px;
-  font-size: 16px;
-}
-
-.card p {
-  margin: 0;
-  font-size: 14px;
-  opacity: 0.75;
-}
-
+/* LESSON */
 .lesson-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 20px;
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
   max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  flex: 1;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .lesson-card h2 {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .lesson-card pre {
   background: #1e1e1e;
   color: #a6e22e;
   padding: 16px;
-  border-radius: 10px;
+  border-radius: 12px;
+  font-family: Consolas, Monaco, monospace;
   font-size: 14px;
   line-height: 1.4;
-  white-space: pre-wrap;
-  font-family: Consolas, Monaco, monospace;
   margin-bottom: 16px;
 }
 
@@ -146,12 +129,11 @@ body {
   background: #4f46e5;
   color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
   font-size: 14px;
   cursor: pointer;
 }
-
 .lesson-card button:hover {
-  opacity: 0.9;
-}
+  background: #4338ca;
+} 

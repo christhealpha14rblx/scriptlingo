@@ -3,75 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <title>ScriptLingo</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
-
 <body>
 
-  <div class="app">
+<div class="app">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo">scriptlingo</div>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">scriptlingo</div>
 
-      <nav class="nav">
-        <button class="active">🏠 Learn</button>
-        <button>🏆 Leaderboards</button>
-        <button>🎯 Quests</button>
-        <button>🛒 Shop</button>
-        <button>👤 Profile</button>
-      </nav>
-    </aside>
+    <nav class="nav">
+      <button class="active">🏠 Learn</button>
+      <button>🏆 Leaderboards</button>
+      <button>🎯 Quests</button>
+      <button>🛒 Shop</button>
+      <button>👤 Profile</button>
+    </nav>
+  </aside>
 
-    <!-- UNIT HEADER COLUMN -->
-    <section class="unit-column">
-      <div class="unit-header">
-        <div>
-          <h1>Unit 1</h1>
-          <p>Workspace & Parts</p>
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- UNIT HEADER (WIDEST ELEMENT) -->
+    <section class="unit-header">
+      <div>
+        <h1>Unit 1</h1>
+        <p>Roblox Studio Basics</p>
+      </div>
+      <div class="unit-star">⭐</div>
+    </section>
+
+    <div class="content">
+
+      <!-- RIGHT SIDE -->
+      <section class="right-column">
+
+        <div class="stats-card">
+          <span>🔥 <b id="streak">1</b> Streak</span>
+          <span>💎 <b id="xp">30</b> XP</span>
+          <span>❤️ <b id="hearts">5</b> Hearts</span>
         </div>
-        <div class="unit-star">⭐</div>
-      </div>
-    </section>
 
-    <section class="lesson-card" id="lesson">
-  <h2 id="lesson-title"></h2>
+        <div class="card">
+          <h3>🏆 Weekly Leaderboard</h3>
+          <p>Coming soon 🚧</p>
+        </div>
 
-  <pre id="lesson-text"></pre>
+        <div class="card">
+          <h3>🎯 Daily Quest</h3>
+          <p>Coming soon 🚧</p>
+        </div>
 
-  <button id="lesson-next">Next</button>
-</section>
+      </section>
 
+      <!-- LESSON -->
+      <section class="lesson-card" id="lesson">
+        <h2 id="lesson-title"></h2>
+        <pre id="lesson-text"></pre>
+        <button id="lesson-next">Next</button>
+      </section>
+
+    </div>
+
+  </main>
+</div>
+
+<script type="module" src="./js/state.js"></script>
 <script type="module" src="./js/lesson.js"></script>
-
-    <!-- MAIN CONTENT -->
-    <section class="content">
-
-      <div class="stats-card">
-        <span>🔥 <b>1</b> Streak</span>
-        <span>💎 <b>30</b> XP</span>
-        <span>❤️ <b>5</b> Hearts</span>
-      </div>
-
-      <div class="card">
-        <h3>🏆 Weekly Leaderboard</h3>
-        <p>Coming soon 🚧</p>
-      </div>
-
-      <div class="card">
-        <h3>🎯 Daily Quest</h3>
-        <p>Coming soon 🚧</p>
-      </div>
-
-    </section>
-
-  </div>
-
-  <!-- JS (SAFE AT BOTTOM) -->
-  <script src="./js/state.js"></script>
-  <script src="./js/home.js"></script>
 
 </body>
 </html>
