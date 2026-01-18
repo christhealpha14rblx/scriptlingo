@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="app">
+<div class="app" id="app">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
@@ -30,7 +30,7 @@
       <section class="unit-column">
         <div class="unit-header">
           <h1>Unit 1</h1>
-          <p>What Is Lua?</p>
+          <p>What is Lua and what it does.</p>
         </div>
 
         <!-- LESSON TILE -->
@@ -63,13 +63,29 @@
   </main>
 </div>
 
-<!-- LESSON OVERLAY -->
-<div id="lessonOverlay" class="lesson-overlay">
-  <div class="lesson-card">
+<!-- FULLSCREEN LESSON -->
+<div id="lessonScreen" class="lesson-screen">
+
+  <!-- TOP BAR -->
+  <div class="lesson-top">
+    <div class="hearts">❤️ <span id="heartCount">5</span></div>
+
+    <div class="progress">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="lesson-content">
     <h2 id="lessonTitle"></h2>
     <pre id="lessonText"></pre>
-    <button id="lessonDone">Continue</button>
   </div>
+
+  <!-- BOTTOM -->
+  <div class="lesson-bottom">
+    <button id="nextBtn">Next</button>
+  </div>
+
 </div>
 
 <script src="./js/home.js"></script>

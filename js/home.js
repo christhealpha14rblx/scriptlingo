@@ -1,28 +1,62 @@
 const lessonTile = document.getElementById("lesson1");
-const overlay = document.getElementById("lessonOverlay");
+const lessonScreen = document.getElementById("lessonScreen");
+const app = document.getElementById("app");
+
 const title = document.getElementById("lessonTitle");
 const text = document.getElementById("lessonText");
-const done = document.getElementById("lessonDone");
+const nextBtn = document.getElementById("nextBtn");
+const progressFill = document.getElementById("progressFill");
 
-const lessonSteps = [
-  {
-    title: "Welcome to ScriptLingo",
-    text: `-- Welcome!
--- ScriptLingo teaches Lua for Roblox Studio`
-  },
+let hearts = 5;
+let step = 0;
+
+const lesson = [
   {
     title: "What is Lua?",
-    text: `-- Lua is the programming language
--- used in Roblox games`
+    text: `-- Lua is the programming language used in Roblox Studio
+-- Every Script you write uses Lua
+
+-- Lua tells Roblox what to do and when to do it`
+  },
+  {
+    title: "Scripts Control the Game",
+    text: `-- Scripts can:
+-- Move parts
+-- Detect players
+-- Give points
+-- Control gameplay logic
+
+-- Without scripts, games would do nothing`
   },
   {
     title: "Different Actions Do Different Things",
-    text: `--you can do different actions to do different things 
-    --such as; create variables, print text, and more!`
+    text: `-- Lua has many actions (called functions)
+
+print("Hello!")  -- shows text in the output
+wait(1)          -- waits 1 second
+
+-- Each action has a purpose`
+  },
+  {
+    title: "Variables Store Information",
+    text: `-- Variables save values so you can reuse them
+
+local score = 0
+local playerName = "Player1"
+
+-- These values can change over time`
+  },
+  {
+    title: "You Did It!",
+    text: `-- You just learned the basics of Roblox Lua 🎉
+-- Scripts use Lua
+-- Actions do things
+-- Variables store data
+
+-- You're officially coding 😎`
   }
 ];
 
-let step = 0;
 
 lessonTile.addEventListener("click", () => {
   step = 0;
@@ -30,20 +64,35 @@ lessonTile.addEventListener("click", () => {
 });
 
 function openLesson() {
-  overlay.style.display = "flex";
-  render();
+  lessonScreen.style.display = "flex";
+  app.style.display = "none";
+  update();
 }
 
-function render() {
-  title.textContent = lessonSteps[step].title;
-  text.textContent = lessonSteps[step].text;
-}
+function update() {
+  title.textContent = lesson[step].title;
+  text.textContent = lesson[step].text;
 
-done.addEventListener("click", () => {
-  step++;
-  if (step >= lessonSteps.length) {
-    overlay.style.display = "none";
+  const progress = ((step + 1) / lesson.length) * 100;
+  progressFill.style.width = progress + "%";
+
+  if (step === lesson.length - 1) {
+    nextBtn.textContent = "Done";
   } else {
-    render();
+    nextBtn.textContent = "Next";
+  }
+}
+
+nextBtn.addEventListener("click", () => {
+  step++;
+  if (step >= lesson.length) {
+    closeLesson();
+  } else {
+    update();
   }
 });
+
+function closeLesson() {
+  lessonScreen.style.display = "none";
+  app.style.display = "flex";
+}
