@@ -117,3 +117,41 @@ body {
   font-size: 14px;
   opacity: 0.75;
 }
+
+.lesson-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.lesson-card h2 {
+  margin-bottom: 12px;
+}
+
+.lesson-card pre {
+  background: #1e1e1e;
+  color: #a6e22e;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  font-family: Consolas, Monaco, monospace;
+  margin-bottom: 16px;
+}
+
+.lesson-card button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lesson-card button:hover {
+  opacity: 0.9;
+}
