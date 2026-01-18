@@ -24,25 +24,28 @@
 
   <!-- MAIN -->
   <main class="main">
-
-    <!-- UNIT HEADER (WIDEST ELEMENT) -->
-    <section class="unit-header">
-      <div>
-        <h1>Unit 1</h1>
-        <p>Roblox Studio Basics</p>
-      </div>
-      <div class="unit-star">⭐</div>
-    </section>
-
     <div class="content">
 
-      <!-- RIGHT SIDE -->
-      <section class="right-column">
+      <!-- UNIT COLUMN -->
+      <section class="unit-column">
+        <div class="unit-header">
+          <h1>Unit 1</h1>
+          <p>What Is Lua?</p>
+        </div>
 
+        <!-- LESSON TILE -->
+        <div class="lesson-tile" id="lesson1">
+          <span class="lesson-num">Lesson 1</span>
+          <span class="lesson-title">Tutorial to Roblox Lua</span>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <section class="right-column">
         <div class="stats-card">
-          <span>🔥 <b id="streak">1</b> Streak</span>
-          <span>💎 <b id="xp">30</b> XP</span>
-          <span>❤️ <b id="hearts">5</b> Hearts</span>
+          <div>🔥 <b>1</b> Streak</div>
+          <div>💎 <b>30</b> XP</div>
+          <div>❤️ <b>5</b> Hearts</div>
         </div>
 
         <div class="card">
@@ -54,23 +57,21 @@
           <h3>🎯 Daily Quest</h3>
           <p>Coming soon 🚧</p>
         </div>
-
-      </section>
-
-      <!-- LESSON -->
-      <section class="lesson-card" id="lesson">
-        <h2 id="lesson-title"></h2>
-        <pre id="lesson-text"></pre>
-        <button id="lesson-next">Next</button>
       </section>
 
     </div>
-
   </main>
 </div>
 
-<script type="module" src="./js/state.js"></script>
-<script type="module" src="./js/lesson.js"></script>
+<!-- LESSON OVERLAY -->
+<div id="lessonOverlay" class="lesson-overlay">
+  <div class="lesson-card">
+    <h2 id="lessonTitle"></h2>
+    <pre id="lessonText"></pre>
+    <button id="lessonDone">Continue</button>
+  </div>
+</div>
 
+<script src="./js/home.js"></script>
 </body>
 </html>

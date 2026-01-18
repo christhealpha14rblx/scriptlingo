@@ -19,9 +19,9 @@ export function addXP(amount) {
 }
 
 export function renderState() {
-  if (xpEl) xpEl.textContent = xp;
-  if (streakEl) streakEl.textContent = streak;
-  if (heartsEl) heartsEl.textContent = hearts;
+  xpEl.textContent = xp;
+  streakEl.textContent = streak;
+  heartsEl.textContent = hearts;
 }
 
 renderState();

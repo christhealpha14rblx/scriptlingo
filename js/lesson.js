@@ -3,22 +3,19 @@ import { addXP } from "./state.js";
 const steps = [
   {
     title: "Welcome to ScriptLingo 👋",
-    code: `-- Welcome!
--- ScriptLingo teaches Lua for Roblox Studio.`
+    code: `-- ScriptLingo teaches Lua for Roblox Studio`
   },
   {
     title: "What is Lua?",
-    code: `-- Lua is the programming language
--- used to create Roblox games.`
+    code: `-- Lua is the language used to build Roblox games`
   },
   {
-    title: "What is a Script?",
-    code: `-- Scripts tell Roblox what to do
--- They control parts, players, and events`
+    title: "Scripts",
+    code: `-- Scripts control behavior in Roblox Studio`
   },
   {
-    title: "Your First Line of Lua",
-    code: `print("Hello, Roblox!")`
+    title: "Different Actions Do Different Things",
+    code: `you can do different actions to do different things such as; create variables, print text, and more!`
   },
   {
     title: "Lesson Complete 🎉",
@@ -28,6 +25,8 @@ const steps = [
 
 let step = 0;
 
+const lesson = document.getElementById("lesson");
+const openLesson = document.getElementById("openLesson");
 const titleEl = document.getElementById("lesson-title");
 const textEl = document.getElementById("lesson-text");
 const nextBtn = document.getElementById("lesson-next");
@@ -37,17 +36,22 @@ function render() {
   textEl.textContent = steps[step].code;
 }
 
+openLesson.addEventListener("click", () => {
+  step = 0;
+  nextBtn.textContent = "Continue";
+  nextBtn.disabled = false;
+  lesson.classList.remove("hidden");
+  render();
+});
+
 nextBtn.addEventListener("click", () => {
   step++;
 
   if (step >= steps.length) {
     addXP(10);
-    nextBtn.disabled = true;
-    nextBtn.textContent = "Done";
+    lesson.classList.add("hidden");
     return;
   }
 
   render();
 });
-
-render();
