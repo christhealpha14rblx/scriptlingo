@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  color: #111;
+}
+
+/* APP LAYOUT */
+.app {
+  display: grid;
+  grid-template-columns: 220px 1.4fr 1fr;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #eee;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #66d400;
+  margin-bottom: 24px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #f1f3f5;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav button.active {
+  background: #e6f7d5;
+  font-weight: 600;
+}
+
+/* UNIT HEADER COLUMN (MAIN FOCUS) */
+.unit-column {
+  padding: 28px;
+}
+
+.unit-header {
+  background: #66d400;
+  color: white;
+  padding: 28px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unit-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.unit-header p {
+  margin: 6px 0 0;
+  opacity: 0.9;
+}
+
+.unit-star {
+  font-size: 28px;
+}
+
+/* CONTENT (RIGHT SIDE) */
+.content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* STATS CARD */
+.stats-card {
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* GENERIC CARD */
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.75;
+}
