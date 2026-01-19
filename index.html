@@ -3,78 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <title>BloxLearn</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+
+<div class="app">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <h1 class="logo">BloxLearn</h1>
 
     <nav class="nav">
-      <a class="active">🏠 Learn</a>
-      <a>🏆 Leaderboard</a>
-      <a>🎯 Quests</a>
-      <a>🛒 Shop</a>
-      <a>👤 Profile</a>
-    </nav>
+      <div class="nav-item active">
+        <img src="./icons/home.svg" class="nav-icon" />
+        <span>Learn</span>
+      </div>
 
-    <div class="sidebar-stats">
-      <p>🔥 1 Streak</p>
-      <p>💎 30 XP</p>
-      <p>❤️ 5 Hearts</p>
-    </div>
+      <div class="nav-item">
+        <img src="./icons/leaderboard.svg" class="nav-icon" />
+        <span>Leaderboard</span>
+      </div>
+
+      <div class="nav-item">
+        <img src="./icons/quest.svg" class="nav-icon" />
+        <span>Quests</span>
+      </div>
+
+      <div class="nav-item">
+        <img src="./icons/shop.svg" class="nav-icon" />
+        <span>Shop</span>
+      </div>
+
+      <div class="nav-item">
+        <img src="./icons/profile.svg" class="nav-icon" />
+        <span>Profile</span>
+      </div>
+    </nav>
   </aside>
 
   <!-- MAIN -->
   <main class="main">
 
-    <section class="unit-layout">
+    <div class="content-grid">
 
-      <!-- LEFT: UNIT + LESSONS -->
-      <div class="unit-left">
+      <!-- LEFT CONTENT -->
+      <div>
+        <section class="unit-header">
+          <h2>Unit 1</h2>
+          <p>Navigation • Layout • Studio Basics</p>
+        </section>
 
-        <div class="unit-header">
-          <div>
-            <h2>Unit 1</h2>
-            <p>
-              Navigation • Layout • Studio Basics
-            </p>
-          </div>
-          <span class="star">⭐</span>
-        </div>
-
-        <div class="card lesson">
+        <section class="lesson">
           Lesson 1 — Tutorial to Roblox Studio
-        </div>
-
+        </section>
       </div>
 
-      <!-- RIGHT: STATS + CARDS -->
-      <div class="unit-right">
+      <!-- RIGHT PANEL -->
+      <aside class="right-panel">
 
-        <div class="card stat-card">🔥 <strong>1</strong> Streak</div>
-        <div class="card stat-card">💎 <strong>30</strong> XP</div>
-        <div class="card stat-card">❤️ <strong>5</strong> Hearts</div>
-
-        <div class="card">
-          <h3>🏆 Weekly Leaderboard</h3>
-          <p>Coming soon 🚧</p>
+        <div class="stats">
+          <div class="stat">
+            <img src="./icons/streak.svg" class="ui-icon" />
+            <span>1 Streak</span>
+          </div>
+          <div class="stat">
+            <img src="./icons/xp.svg" class="ui-icon" />
+            <span>30 XP</span>
+          </div>
+          <div class="stat">
+            <img src="./icons/heart.svg" class="ui-icon" />
+            <span>5 Hearts</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>🎯 Daily Quest</h3>
-          <p>Coming soon 🚧</p>
+          <div class="card-title">
+            <img src="./icons/leaderboard.svg" class="ui-icon" />
+            Weekly Leaderboard
+          </div>
+          <p>Coming soon</p>
         </div>
 
-      </div>
+        <div class="card">
+          <div class="card-title">
+            <img src="./icons/quest.svg" class="ui-icon" />
+            Daily Quest
+          </div>
+          <p>Coming soon</p>
+        </div>
 
-    </section>
+      </aside>
+
+    </div>
 
   </main>
+</div>
 
 </body>
 </html>
