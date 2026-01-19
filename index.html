@@ -2,45 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>LuaLingo</title>
-
-  <!-- IMPORTANT: make sure this path is correct -->
-  <link rel="stylesheet" href="css/styles.css" />
-
+  <title>ScriptLingo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
 
-  <!-- 🔒 TOP NAVBAR (LOCKED) -->
-  <header class="topbar">
-    <div class="topbar-left">
-      <img src="favicon.ico" class="logo" />
+  <!-- ================= TOP NAVBAR ================= -->
+  <header class="navbar">
+    <div class="nav-left">
+      <span class="logo">🎮</span>
       <span class="brand">LuaLingo</span>
     </div>
 
-    <div class="topbar-right">
-      <div class="pill streak">🔥 <span>1</span></div>
-      <div class="pill xp">⚡ <span>10 XP</span></div>
-      <div class="pill hearts">❤️❤️❤️❤️❤️</div>
-      <button class="profile-btn">👤</button>
+    <div class="nav-right">
+      <div class="pill fire">🔥 1</div>
+      <div class="pill xp">⚡ 10 XP</div>
+      <div class="hearts">❤️❤️❤️❤️❤️</div>
+      <div class="avatar">👤</div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="page">
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="container">
+
+    <!-- WELCOME CARD -->
     <section class="welcome-card">
-      <h1>Welcome back, Chris! 👋</h1>
-      <p>Continue your Roblox scripting journey</p>
+      <div class="welcome-icon">⭐</div>
 
-      <div class="progress">
-        <span>Level 1</span>
-        <span>10 / 100 XP</span>
-      </div>
+      <div class="welcome-text">
+        <h1>Welcome back, Chris! 👋</h1>
+        <p>Continue your Roblox scripting journey</p>
 
-      <div class="progress-bar">
-        <div class="progress-fill"></div>
+        <div class="level-row">
+          <span class="level-badge">1</span>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <span class="xp-text">10 / 100 XP</span>
+        </div>
       </div>
     </section>
+
+    <!-- LEARNING PATH -->
+    <section class="learning-path">
+      <h2>Learning Path</h2>
+      <p class="subtitle">Master Roblox Studio & Lua step by step</p>
+
+      <div class="path-grid">
+        <div class="path-card">
+          <div class="path-icon">🎮</div>
+          <h3>Lua Basics</h3>
+          <p>2 lessons</p>
+        </div>
+
+        <div class="path-card blue">
+          <div class="path-icon">📦</div>
+          <h3>Variables & Data</h3>
+          <p>4 lessons</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 </body>

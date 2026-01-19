@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,133 +6,143 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f9fafb;
-  color: #111827;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: #f7f9fc;
+  color: #111;
 }
 
-/* =========================
-   TOP NAVBAR (LOCKED)
-========================= */
-
-.topbar {
-  position: sticky;
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
 
   height: 64px;
   padding: 0 24px;
 
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
 }
 
-/* LEFT */
-.topbar-left {
+.nav-left {
   display: flex;
   align-items: center;
   gap: 10px;
-  min-width: 180px;
 }
 
 .logo {
-  width: 28px;
-  height: 28px;
+  font-size: 22px;
 }
 
 .brand {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #16a34a;
 }
 
-/* RIGHT */
-.topbar-right {
+.nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
-  min-width: 320px;
 }
 
-/* STATS PILLS */
 .pill {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
   padding: 6px 12px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-
-  background: #f3f4f6;
-  white-space: nowrap;
 }
 
-.streak {
+.pill.fire {
   background: #fff7ed;
+  color: #ea580c;
 }
 
-.xp {
-  background: #fef9c3;
+.pill.xp {
+  background: #fef3c7;
+  color: #ca8a04;
 }
 
 .hearts {
-  background: #fee2e2;
+  font-size: 18px;
 }
 
-/* PROFILE BUTTON */
-.profile-btn {
-  border: none;
-  background: #e5e7eb;
-  border-radius: 999px;
-  width: 36px;
-  height: 36px;
+.avatar {
+  font-size: 20px;
   cursor: pointer;
-  font-size: 16px;
 }
 
-/* =========================
-   PAGE CONTENT
-========================= */
-
-.page {
-  max-width: 1000px;
-  margin: 32px auto;
-  padding: 0 24px;
+/* ================= PAGE LAYOUT ================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px 40px;
 }
 
-/* WELCOME CARD */
+/* ================= WELCOME CARD ================= */
 .welcome-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
   background: white;
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
-.welcome-card h1 {
-  font-size: 28px;
-  margin-bottom: 6px;
-}
+.welcome-icon {
+  width: 72px;
+  height: 72px;
+  background: #22c55e;
+  border-radius: 16px;
 
-.welcome-card p {
-  color: #6b7280;
-  margin-bottom: 16px;
-}
-
-/* PROGRESS */
-.progress {
   display: flex;
-  justify-content: space-between;
-  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+}
+
+.welcome-text h1 {
+  font-size: 22px;
   margin-bottom: 6px;
+}
+
+.welcome-text p {
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.level-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.level-badge {
+  background: #22c55e;
+  color: white;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .progress-bar {
+  flex: 1;
   height: 8px;
   background: #e5e7eb;
   border-radius: 999px;
@@ -145,4 +153,74 @@ body {
   width: 10%;
   height: 100%;
   background: #22c55e;
+}
+
+.xp-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ================= LEARNING PATH ================= */
+.learning-path {
+  margin-top: 40px;
+}
+
+.learning-path h2 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.path-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.path-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.path-card.blue .path-icon {
+  background: #38bdf8;
+}
+
+.path-icon {
+  width: 48px;
+  height: 48px;
+  background: #22c55e;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.path-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.path-card p {
+  font-size: 13px;
+  color: #6b7280;
 }
