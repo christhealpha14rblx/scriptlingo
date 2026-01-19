@@ -2,68 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ScriptLingo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/styles.css" />
+  <title>BloxLearn</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ================= TOP NAVBAR ================= -->
-  <header class="navbar">
-    <div class="nav-left">
-      <span class="logo">🎮</span>
-      <span class="brand">LuaLingo</span>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h1 class="logo">BloxLearn</h1>
+
+    <nav class="nav">
+      <a class="active">🏠 Learn</a>
+      <a>🏆 Leaderboard</a>
+      <a>🎯 Quests</a>
+      <a>🛒 Shop</a>
+      <a>👤 Profile</a>
+    </nav>
+
+    <div class="sidebar-stats">
+      <p>🔥 1 Streak</p>
+      <p>💎 30 XP</p>
+      <p>❤️ 5 Hearts</p>
     </div>
+  </aside>
 
-    <div class="nav-right">
-      <div class="pill fire">🔥 1</div>
-      <div class="pill xp">⚡ 10 XP</div>
-      <div class="hearts">❤️❤️❤️❤️❤️</div>
-      <div class="avatar">👤</div>
-    </div>
-  </header>
+  <!-- MAIN -->
+  <main class="main">
 
-  <!-- ================= MAIN CONTENT ================= -->
-  <main class="container">
+    <section class="unit-layout">
 
-    <!-- WELCOME CARD -->
-    <section class="welcome-card">
-      <div class="welcome-icon">⭐</div>
+      <!-- LEFT: UNIT + LESSONS -->
+      <div class="unit-left">
 
-      <div class="welcome-text">
-        <h1>Welcome back, Chris! 👋</h1>
-        <p>Continue your Roblox scripting journey</p>
-
-        <div class="level-row">
-          <span class="level-badge">1</span>
-          <div class="progress-bar">
-            <div class="progress-fill"></div>
+        <div class="unit-header">
+          <div>
+            <h2>Unit 1</h2>
+            <p>
+              Navigation • Layout • Studio Basics
+            </p>
           </div>
-          <span class="xp-text">10 / 100 XP</span>
+          <span class="star">⭐</span>
         </div>
+
+        <div class="card lesson">
+          Lesson 1 — Tutorial to Roblox Studio
+        </div>
+
       </div>
-    </section>
 
-    <!-- LEARNING PATH -->
-    <section class="learning-path">
-      <h2>Learning Path</h2>
-      <p class="subtitle">Master Roblox Studio & Lua step by step</p>
+      <!-- RIGHT: STATS + CARDS -->
+      <div class="unit-right">
 
-      <div class="path-grid">
-        <div class="path-card">
-          <div class="path-icon">🎮</div>
-          <h3>Lua Basics</h3>
-          <p>2 lessons</p>
+        <div class="card stat-card">🔥 <strong>1</strong> Streak</div>
+        <div class="card stat-card">💎 <strong>30</strong> XP</div>
+        <div class="card stat-card">❤️ <strong>5</strong> Hearts</div>
+
+        <div class="card">
+          <h3>🏆 Weekly Leaderboard</h3>
+          <p>Coming soon 🚧</p>
         </div>
 
-        <div class="path-card blue">
-          <div class="path-icon">📦</div>
-          <h3>Variables & Data</h3>
-          <p>4 lessons</p>
+        <div class="card">
+          <h3>🎯 Daily Quest</h3>
+          <p>Coming soon 🚧</p>
         </div>
+
       </div>
+
     </section>
 
   </main>
