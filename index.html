@@ -4,47 +4,41 @@
   <meta charset="UTF-8" />
   <title>LuaLingo</title>
 
-  <!-- Favicon (optional) -->
-  <link rel="icon" href="favicon.ico" />
-
-  <!-- Styles -->
+  <!-- IMPORTANT: make sure this path is correct -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
-  <!-- ===== TOP NAVBAR ===== -->
+  <!-- 🔒 TOP NAVBAR (LOCKED) -->
   <header class="topbar">
     <div class="topbar-left">
-      <div class="logo">🎮</div>
+      <img src="favicon.ico" class="logo" />
       <span class="brand">LuaLingo</span>
     </div>
 
     <div class="topbar-right">
       <div class="pill streak">🔥 <span>1</span></div>
       <div class="pill xp">⚡ <span>10 XP</span></div>
-      <div class="hearts">❤️ ❤️ ❤️ ❤️ ❤️</div>
-      <div class="profile">👤</div>
+      <div class="pill hearts">❤️❤️❤️❤️❤️</div>
+      <button class="profile-btn">👤</button>
     </div>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- MAIN CONTENT -->
   <main class="page">
     <section class="welcome-card">
-      <div class="welcome-left">
-        <div class="welcome-icon">⭐</div>
+      <h1>Welcome back, Chris! 👋</h1>
+      <p>Continue your Roblox scripting journey</p>
+
+      <div class="progress">
+        <span>Level 1</span>
+        <span>10 / 100 XP</span>
       </div>
 
-      <div class="welcome-right">
-        <h1>Welcome back, Chris! 👋</h1>
-        <p>Continue your Roblox scripting journey</p>
-
-        <div class="progress">
-          <span class="level">Level 1</span>
-          <div class="progress-bar">
-            <div class="progress-fill"></div>
-          </div>
-          <span class="xp-count">10 / 100 XP</span>
-        </div>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
       </div>
     </section>
   </main>
