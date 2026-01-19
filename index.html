@@ -2,92 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>scriptlingo│Learn Roblox Lua</title>
-  <link rel="stylesheet" href="./css/styles.css" />
+  <title>LuaLingo</title>
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<div class="app" id="app">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="logo">scriptlingo</div>
-
-    <nav class="nav">
-      <button class="active">🏠 Learn</button>
-      <button>🏆 Leaderboards</button>
-      <button>🎯 Quests</button>
-      <button>🛒 Shop</button>
-      <button>👤 Profile</button>
-    </nav>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main">
-    <div class="content">
-
-      <!-- UNIT COLUMN -->
-      <section class="unit-column">
-        <div class="unit-header">
-          <h1>Unit 1</h1>
-          <p>What is Lua and what it does.</p>
-        </div>
-
-        <!-- LESSON TILE -->
-        <div class="lesson-tile" id="lesson1">
-          <span class="lesson-num">Lesson 1</span>
-          <span class="lesson-title">Tutorial to Roblox Lua</span>
-        </div>
-      </section>
-
-      <!-- RIGHT COLUMN -->
-      <section class="right-column">
-        <div class="stats-card">
-          <div>🔥 <b>1</b> Streak</div>
-          <div>💎 <b>30</b> XP</div>
-          <div>❤️ <b>5</b> Hearts</div>
-        </div>
-
-        <div class="card">
-          <h3>🏆 Weekly Leaderboard</h3>
-          <p>Coming soon 🚧</p>
-        </div>
-
-        <div class="card">
-          <h3>🎯 Daily Quest</h3>
-          <p>Coming soon 🚧</p>
-        </div>
-      </section>
-
+  <!-- ===== TOP NAVBAR ===== -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="logo">🎮</div>
+      <span class="brand">LuaLingo</span>
     </div>
+
+    <div class="topbar-right">
+      <div class="pill streak">🔥 <span>1</span></div>
+      <div class="pill xp">⚡ <span>10 XP</span></div>
+      <div class="hearts">❤️ ❤️ ❤️ ❤️ ❤️</div>
+      <div class="profile">👤</div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="page">
+    <section class="welcome-card">
+      <div class="welcome-left">
+        <div class="welcome-icon">⭐</div>
+      </div>
+
+      <div class="welcome-right">
+        <h1>Welcome back, Chris! 👋</h1>
+        <p>Continue your Roblox scripting journey</p>
+
+        <div class="progress">
+          <span class="level">Level 1</span>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <span class="xp-count">10 / 100 XP</span>
+        </div>
+      </div>
+    </section>
   </main>
-</div>
 
-<!-- FULLSCREEN LESSON -->
-<div id="lessonScreen" class="lesson-screen">
-
-  <!-- TOP BAR -->
-  <div class="lesson-top">
-    <div class="hearts">❤️ <span id="heartCount">5</span></div>
-
-    <div class="progress">
-      <div class="progress-fill" id="progressFill"></div>
-    </div>
-  </div>
-
-  <!-- CONTENT -->
-  <div class="lesson-content">
-    <h2 id="lessonTitle"></h2>
-    <pre id="lessonText"></pre>
-  </div>
-
-  <!-- BOTTOM -->
-  <div class="lesson-bottom">
-    <button id="nextBtn">Next</button>
-  </div>
-
-</div>
-
-<script src="./js/home.js"></script>
 </body>
 </html>
